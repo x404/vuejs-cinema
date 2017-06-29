@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import './style.scss'
+import './style.scss';
+import genres from './util/genres';
 
 new Vue({
 	el: '#app',
@@ -21,11 +22,26 @@ new Vue({
 			}
 		},
 		'movie-filter' : {
+			data(){
+				return{
+					genres
+				}
+			},
 			template: `
-			<div id="movie-filter">
-				<h2 class="filter-results"></h2>
-			</div>
-			`
+				<div id="movie-filter">
+					<h2 class="filter-results">Filter results</h2>
+					<div class="filter-group">
+						<check-filter v-for="genre in genres"></check-filter>
+					</div>
+				</div>
+				`,
+			components:{
+				'check-filter' : {
+					template: `
+						<div>Filter</div>
+					`
+				}
+			}
 		}
 	}
 });
