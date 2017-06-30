@@ -14,7 +14,7 @@ new Vue({
 			if (checked){
 				this[category].push(title);
 			} else {
-				let index = this[category0].indexOf(title);
+				let index = this[category].indexOf(title);
 				if (index > -1){
 					this[category].splice(index, 1);
 				}
@@ -31,12 +31,13 @@ new Vue({
 			data(){
 				return{
 					movies: [
-						{ title: 'Pulp Fiction'},
-						{ title: 'Home Alone'},
-						{ title: 'Austin Powers'}
+						{ title: 'Pulp Fiction', genre: genres.CRIME},
+						{ title: 'Home Alone', genre: genres.COMEDY},
+						{ title: 'Austin Powers', genre: genres.COMEDY}
 					]
 				}
-			}
+			},
+			props: [ 'genre', 'time' ],
 		},
 		'movie-filter' : {
 			data(){
