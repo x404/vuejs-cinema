@@ -1,6 +1,6 @@
 <template>
 	<div id="movie-list">
-		<movie-item v-for="movie in filterMovies" class="movie" v-bind:movie="movie"></movie-item>
+		<movie-item v-for="movie in filterMovies" v-bind:movie="movie.movie"></movie-item>
 	</div>	
 </template>
 
