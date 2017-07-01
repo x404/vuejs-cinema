@@ -23,7 +23,7 @@ new Vue({
 				this[category].push(title);
 			} else {
 				let index = this[category].indexOf(title);
-				console.log(index);
+				// console.log(index);
 				if (index > -1){
 					this[category].splice(index, 1);
 				}
