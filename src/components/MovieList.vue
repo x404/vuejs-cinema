@@ -1,7 +1,7 @@
 <template>
 	<div id="movie-list">
 		<div v-if="filterMovies.length">
-			<movie-item v-for="movie in filterMovies" v-bind:movie="movie.movie"></movie-item>
+			<movie-item v-for="movie in filterMovies" v-bind:movie="movie.movie" v-bind:sessions="movie.sessions"></movie-item>
 		</div>
 		<div v-else-if="movies.length" class="no-results">
 			No results.
@@ -26,7 +26,7 @@
 					} else {
 						let movieGenres = movie.movie.Genre.split(", ");
 						let matched = true;
-						console.log(this.genre);
+						// console.log(this.genre);
 						this.genre.forEach(genre => {
 							if (movieGenres.indexOf(genre) === -1){
 								matched = false;
@@ -45,6 +45,9 @@
 			},
 			components: {
 				MovieItem
+			}, 
+			created(){
+				console.log(this.$moment);
 			}
 		}
 </script>

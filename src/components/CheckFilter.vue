@@ -19,7 +19,7 @@ import genres from '../util/genres';
 			checkFilter(){
 				this.checked = !this.checked;
 				this.$emit('check-filter', 'genre', this.title, this.checked);
-				console.log(this.title);
+				// console.log(this.title);
 			}
 		}
 	}
