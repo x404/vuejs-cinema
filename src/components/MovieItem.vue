@@ -11,8 +11,8 @@
 					<h2>{{ movie.Title }}</h2>
 				</router-link>
 				<span class="movie-rating">{{ movie.Rated }}</span>
-				<slot></slot>
 			</div>
+			<slot></slot>
 		</div>
 	</div>
 </template>
