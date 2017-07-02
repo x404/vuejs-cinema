@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import './style.scss';
 
-import Overview from './components/Overview.vue';
-
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
 
@@ -19,7 +17,7 @@ Vue.use(VueRouter);
 
 
 import routes from './util/routes';
-const router = new VueRouter({routes})
+const router = new VueRouter({ routes })
 
 
 new Vue({
@@ -31,9 +29,6 @@ new Vue({
 		moment,
 		day: moment(),
 		bus
-	},
-	components: {
-		Overview
 	},
 
 	created(){

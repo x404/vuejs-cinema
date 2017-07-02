@@ -15,6 +15,6 @@
 		components: {
 			MovieList,
 			MovieFilter
-		},	
+		},
 	}
 </script>
